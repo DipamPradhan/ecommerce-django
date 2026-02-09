@@ -12,6 +12,7 @@
                 <th>Stock</th>
                 <th>Added At</th>
                 <th>Seller</th>
+                <th>Ratings</th>
                 <th>Actions</th>
                 
             </tr>
@@ -20,11 +21,18 @@
             {% for product in products %}
             <tr>
                 <td>{{ product.name }}</td>
-                <td>{{ product.description|truncatewords:10 }}</td>
+                <td>{{ product.description|truncatewords:5 }}</td>
                 <td>Rs. {{ product.price }}</td>
                 <td>{{ product.stock }}</td>
                 <td>{{ product.created_at|date:"M d" }}</td>
                 <td>{{product.seller}}</td>
+                <td>
+                    {% if product.review_count > 0 %}
+                         {{ product.avg_rating|floatformat:1 }} ⭐ ({{ product.review_count }})
+                    {% else %}
+                        No ratings
+                    {% endif %}
+                </td>
                 <td>
                     {% if product.seller.pk == request.user.pk %}
                                  <a href="{{product.get_absolute_url}}" class="btn btn-sm btn-primary">View</a>
