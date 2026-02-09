@@ -32,7 +32,7 @@
 
         {% if user.is_authenticated %}
         <li class="nav-item">
-          <a href="#" class="nav-link">+ Add Products</a>
+          <a href="{%url 'product_add' %}" class="nav-link">+ Add Products</a>
         </li>
         {% endif %}
       </ul>
@@ -80,6 +80,7 @@
                   Logout
                 </button>
               </form>
+
             </li>
           </ul>
         </li>

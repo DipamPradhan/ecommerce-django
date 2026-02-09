@@ -4,22 +4,12 @@
 {% block title %}Home{% endblock title %}
 {% block content %}
 {% if user.is_authenticated %}
-  <div style="display:flex; align-items:center; gap:10px;">
-    
-    {% if user.profile_image %}
-      <img src="{{ user.profile_image.url }}"
-           style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
-    {% else %}
-      <img src="{% static 'images/userNoneLogo.jpg' %}"
-           style="width:40px; height:40px; border-radius:50%;">
-    {% endif %}
-
-    <p>Hello, {{ user.username }}</p>
-    
-    <form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>
+  <div style="margin-top: 20px;">
+    <h1 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 10px;">Welcome back, <strong style="color: red;">{{ user.username|title }}</strong></h1>
+    <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px;">Ready to explore?</p>
+    <a href="{% url 'product_list' %}" class="btn btn-lg" style="background-color: green; color: white; font-weight: bold;">
+      View all Products
+    </a>
   </div>
 {% else %}
   <p>You are not logged in</p>
