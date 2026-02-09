@@ -58,33 +58,29 @@ git clone https://github.com/DipamPradhan/ecommerce-django
 cd ecommerce
 
 ### Windows:
----
-python -m venv .venv
----
-.venv\Scripts\activate
+
+- python -m venv .venv
+- .venv\Scripts\activate
 
 ### Mac/Linux:
----
-python3 -m venv .venv
----
-source .venv/bin/activate
+
+- python3 -m venv .venv
+- source .venv/bin/activate
 
 
 ### Install Dependecies
----
-pip install -r requirements.txt
+
+- pip install -r requirements.txt
 
 ### Apply Migrations
----
-python manage.py makemigrations
----
-python manage.py migrate
+- python manage.py makemigrations
+- python manage.py migrate
 
 ### Create a superuser
-python manage.py createsuperuser
+- python manage.py createsuperuser
 
 ### Run server
-python manage.py runserver
+- python manage.py runserver
 **Click:** http://127.0.0.1:8000/
 
 ### Admin url
