@@ -39,9 +39,10 @@
                     <span class="text-danger">No</span>
                 {% endif %}
             </p>
-
-            <a href="{% url 'product_update' product.id%}" class="btn btn-sm btn-warning">Update</a>
-            <a href="{% url 'product_delete' product.id%}" class="btn btn-sm btn-danger">Delete</a>
+{% if product.seller.pk == request.user.pk %}
+            <a href="{% url 'product_update' product.id%}" class="btn  btn-warning">Update</a>
+            <a href="{% url 'product_delete' product.id%}" class="btn  btn-danger">Delete</a>
+        {% endif %}
         </div>
     </div>
 
