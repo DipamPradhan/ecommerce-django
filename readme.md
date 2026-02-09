@@ -81,10 +81,10 @@ cd ecommerce
 
 ### Run server
 - python manage.py runserver
-**Click:** http://127.0.0.1:8000/
+- Click: http://127.0.0.1:8000/
 
 ### Admin url
-http://127.0.0.1:8000/admin/
+- http://127.0.0.1:8000/admin/
 
 ## © Copyright
 Copyright (c) 2026 DIPAM PRADHAN  
