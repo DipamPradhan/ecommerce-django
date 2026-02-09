@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %} {% load static %} {% endcomment %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+  <div style="display:flex; align-items:center; gap:10px;">
+    
+    {% if user.profile_image %}
+      <img src="{{ user.profile_image.url }}"
+           style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+    {% else %}
+      <img src="{% static 'images/userNoneLogo.jpg' %}"
+           style="width:40px; height:40px; border-radius:50%;">
+    {% endif %}
+
+    <p>Hello, {{ user.username }}</p>
+    
+    <form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
+  </div>
+{% else %}
+  <p>You are not logged in</p>
+
+<a href="{% url 'login' %}">Log In</a> |
+<a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+{% endblock content %}

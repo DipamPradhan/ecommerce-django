@@ -14,8 +14,28 @@ class CustomUserAdmin(UserAdmin):
         "phone",
         "is_staff",
     ]
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("phone",)}),)
-    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("phone",)}),)
+    fieldsets = UserAdmin.fieldsets + (
+        (
+            None,
+            {
+                "fields": (
+                    "phone",
+                    "profile_image",
+                )
+            },
+        ),
+    )
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        (
+            None,
+            {
+                "fields": (
+                    "phone",
+                    "profile_image",
+                    )
+            },
+        ),
+    )
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
