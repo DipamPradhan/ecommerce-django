@@ -57,12 +57,12 @@ This project is beginner-friendly and suitable for learning Django fundamentals 
 git clone https://github.com/DipamPradhan/ecommerce-django
 cd ecommerce
 
-**Windows:**
+### Windows:
 python -m venv .venv
 ---
 .venv\Scripts\activate
 
-**Mac/Linux:**
+### Mac/Linux:
 python3 -m venv .venv
 ---
 source .venv/bin/activate
