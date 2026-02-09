@@ -58,20 +58,24 @@ git clone https://github.com/DipamPradhan/ecommerce-django
 cd ecommerce
 
 ### Windows:
+---
 python -m venv .venv
 ---
 .venv\Scripts\activate
 
 ### Mac/Linux:
+---
 python3 -m venv .venv
 ---
 source .venv/bin/activate
 
 
 ### Install Dependecies
+---
 pip install -r requirements.txt
 
 ### Apply Migrations
+---
 python manage.py makemigrations
 ---
 python manage.py migrate
