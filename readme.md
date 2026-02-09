@@ -54,8 +54,8 @@ This project is beginner-friendly and suitable for learning Django fundamentals 
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/DipamPradhan/ecommerce-django
-cd ecommerce
+- git clone https://github.com/DipamPradhan/ecommerce-django
+- cd ecommerce
 
 ### Windows:
 
